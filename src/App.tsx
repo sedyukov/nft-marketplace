@@ -8,7 +8,7 @@ function App(): JSX.Element {
         <div className="basis-1/4">
           <Sidebar />
         </div>
-        <div className="basis-3/4">2</div>
+        <div className="basis-3/4 bg-slate-300">2</div>
       </div>
     </div>
   );

@@ -60,7 +60,7 @@ function Sidebar(): JSX.Element {
     imgActive: dashboardActive,
   }];
   return (
-    <div className="flex flex-col pl-8 pt-8">
+    <div className="flex flex-col px-8 pt-8">
       <div>
         <img src={logo} alt="logo" />
       </div>
@@ -69,12 +69,12 @@ function Sidebar(): JSX.Element {
           {mainMenu.map((el) => (
             activeItem !== el.title
               ? (
-                <li className="mb-6 text-gray-menu">
+                <li key={el.title} className="mb-6 text-gray-menu">
                   <img src={el.img} alt="dashboard" className="inline mr-5" />
                   <span>{el.title}</span>
                 </li>
               ) : (
-                <li className="mb-6 text-active-menu">
+                <li key={el.title} className="mb-6 text-active-menu">
                   <img src={el.imgActive} alt="dashboard" className="inline mr-5" />
                   <span>{el.title}</span>
                 </li>
@@ -88,12 +88,12 @@ function Sidebar(): JSX.Element {
           {profileMenu.map((el) => (
             activeItem !== el.title
               ? (
-                <li className="mb-6 text-gray-menu">
+                <li key={el.title} className="mb-6 text-gray-menu">
                   <img src={el.img} alt="dashboard" className="inline mr-5" />
                   <span>{el.title}</span>
                 </li>
               ) : (
-                <li className="mb-6 text-active-menu">
+                <li key={el.title} className="mb-6 text-active-menu">
                   <img src={el.imgActive} alt="dashboard" className="inline mr-5" />
                   <span>{el.title}</span>
                 </li>
@@ -107,12 +107,20 @@ function Sidebar(): JSX.Element {
           {otherMenu.map((el) => (
             activeItem !== el.title
               ? (
-                <li className="mb-6 text-gray-menu">
-                  <img src={el.img} alt="dashboard" className="inline mr-5" />
-                  <span>{el.title}</span>
+                <li key={el.title} className="mb-6 text-gray-menu inline-flex justify-between w-full">
+                  <span>
+                    <img src={el.img} alt="dashboard" className="inline mr-5" />
+                    <span>{el.title}</span>
+                  </span>
+                  <label htmlFor="default-toggle" className="flex relative items-center cursor-pointer">
+                    <input type="checkbox" value="" id="default-toggle" className="sr-only peer" />
+                    <div
+                      className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 inline"
+                    />
+                  </label>
                 </li>
               ) : (
-                <li className="mb-6 text-active-menu">
+                <li key={el.title} className="mb-6 text-active-menu">
                   <img src={el.imgActive} alt="dashboard" className="inline mr-5" />
                   <span>{el.title}</span>
                 </li>

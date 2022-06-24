@@ -1,0 +1,13 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        'gray-menu': '#7A797D',
+        'active-menu': '#5429FFÅ',
+      },
+    },
+  },
+  plugins: [],
+};
