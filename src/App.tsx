@@ -5,10 +5,10 @@ function App(): JSX.Element {
   return (
     <div className="App">
       <div className="flex flex-row">
-        <div className="basis-1/4">
+        <div className="min-w-[300px]">
           <Sidebar />
         </div>
-        <div className="basis-3/4 bg-slate-300">2</div>
+        <div className="basis-10/12 bg-slate-300">2</div>
       </div>
     </div>
   );
