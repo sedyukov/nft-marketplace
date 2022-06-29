@@ -5,7 +5,11 @@ module.exports = {
     extend: {
       colors: {
         'gray-menu': '#7A797D',
-        'active-menu': '#5429FFÅ',
+        'active-menu': '#5429FF',
+        'your-balance': '#E0DEE5',
+      },
+      backgroundImage: {
+        'balance-widget': "url('img/balance-widget.svg')",
       },
     },
   },

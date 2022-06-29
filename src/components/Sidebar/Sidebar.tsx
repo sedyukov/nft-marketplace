@@ -17,6 +17,7 @@ import historyActive from './img/profile/history-active.svg';
 import portfolioActive from './img/profile/portfolio-active.svg';
 import settingsActive from './img/profile/settings-active.svg';
 import walletActive from './img/profile/wallet-active.svg';
+import BalanceWidget from '../BalanceWidget/BalanceWidget';
 
 function Sidebar(): JSX.Element {
   const activeItem = 'Dashboard';
@@ -101,7 +102,7 @@ function Sidebar(): JSX.Element {
           ))}
         </ul>
       </div>
-      <div className="mt-8">
+      <div className="mt-8 mb-[40px]">
         <div className="font-bold text-sm tracking-wider mb-6">{'Other'.toUpperCase()}</div>
         <ul className="font-medium text-base">
           {otherMenu.map((el) => (
@@ -128,6 +129,7 @@ function Sidebar(): JSX.Element {
           ))}
         </ul>
       </div>
+      <BalanceWidget />
     </div>
   );
 }
